@@ -22,3 +22,9 @@ commands of Kubernetes:
 crictl: limited functions, better for debugging (kubelet doesnt recognise crictl commands, it would delete them, that's why it can be used for debugging purposes only)
 
 
+ETCD commands:
+default version is rtcdctl veersion: 3.3  API version: 2  command would be: ./etcdctl set key1 value1
+upgrade version by ETCDCTL_API=3 ./etcdctl version  then in API version 3 command would be ./etcdctl put key1 value1
+
+
+
