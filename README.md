@@ -1,3 +1,13 @@
+to do: 
+23rd Aug: get familiar with linux commands
+
+
+
+
+
+
+
+
 Udemy course link: https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14298418#lecture-article
 
 Cluster architecture of Kubernetes:
@@ -30,4 +40,6 @@ upgrade version by ETCDCTL_API=3 ./etcdctl version  then in API version 3 comman
 Kube-Scheduler decides which pod goes on which node, kubelet creates the pod and places the pod on the node
 
 Kubelet: register node, create pods, monitor node and pods
+
+
 
