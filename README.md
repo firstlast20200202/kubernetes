@@ -27,4 +27,5 @@ default version is rtcdctl veersion: 3.3  API version: 2  command would be: ./et
 upgrade version by ETCDCTL_API=3 ./etcdctl version  then in API version 3 command would be ./etcdctl put key1 value1
 
 
+Kube-Scheduler decides which pod goes on which node, kubelet creates the pod and places the pod on the node
 
