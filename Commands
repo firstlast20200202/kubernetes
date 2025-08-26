@@ -1,1 +1,3 @@
 kubectl get pods
+
+kubectl run <pod-name> --image=nginx //create a pod using the nginx image
