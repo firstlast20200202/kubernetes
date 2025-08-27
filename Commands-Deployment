@@ -1,0 +1,29 @@
+deployment-definition.yml (contents are exactly simialr to the replicaset definition file except 'kind')
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx
+replicas: 3
+selector:
+  matchlabels:
+    type: front-end
+
+Once the file is ready, run commands:
+kubectl create -f deployment-definition.yml
+kubectl get deployments  //a deployment auto-creates a replica set
+kubectl get replicaset  //the replica set auto-creates pods
+kubectl get pods
