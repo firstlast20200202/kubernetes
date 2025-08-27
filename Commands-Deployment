@@ -27,3 +27,4 @@ kubectl create -f deployment-definition.yml
 kubectl get deployments  //a deployment auto-creates a replica set
 kubectl get replicaset  //the replica set auto-creates pods
 kubectl get pods
+kubectl get all  //get all the created objects at once
