@@ -6,3 +6,23 @@ kubectl run <pod-name> --image=nginx //create a pod using the nginx image
 
 kubectl describe pod <pod-name>
 
+kubectl get pods -o wide  //fetch statuses and nodes of a bunch of pods
+
+clear
+
+kubectl delete pod <pod-name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
