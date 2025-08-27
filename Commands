@@ -12,7 +12,22 @@ clear
 
 kubectl delete pod <pod-name>
 
+question: "Create a new pod with the name redis and with the image redis123, use a pod-definition YAML file and yes the imange name is wrong."
+kubectl run redis --image=redis123 --dry-run -o yaml  //create a pod with the pod-definition yaml file
+kubectl run redis --image=redis123 --dry-run=client -o yaml
+kubectl run redis --image=redis123 --dry-run=client -o yaml > redis.yaml
+cat redis.yaml
+kubectl create -f redis.yaml
+kubectl get pods
 
+question: "Now change the image on this pod to redis, once done the pod should be in a running state."
+cat redis.yaml  //display the contents of one or more files
+vi redis.yaml
+i
+:wq!
+esc
+kubectl apply -f redis.yaml
+kubectl get pods
 
 
 
