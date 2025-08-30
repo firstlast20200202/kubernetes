@@ -1,0 +1,5 @@
+kubectl explain replicaset
+output would be explaining each part in the yaml file, notice that the first part is as below which means that the version should be apps/v1 (counterpart in replicate controller is 'v1')
+GROUP:      apps
+KIND:       ReplicaSet
+VERSION:    v1
