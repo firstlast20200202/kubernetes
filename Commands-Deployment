@@ -28,3 +28,7 @@ kubectl get deployments  //a deployment auto-creates a replicaset
 kubectl get replicaset  //a replicaset auto-creates pods
 kubectl get pods
 kubectl get all  //get all the created objects at once
+
+
+when debug, can get into details of one of the pods as below:
+kubectl describe <pod-name>
