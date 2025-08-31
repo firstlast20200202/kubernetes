@@ -18,3 +18,13 @@ recreate it, please refer to the file named new-replica-set.yaml, which is saved
 kubectl edit rs new-replica-set
 after updating the image, gotta manually delete all the pods and it will auto-creates new ones
 kubectl delete pod pod-1 pod-2 pod-3 pod-4 ...
+
+
+question: Scale the ReplicaSet to 5 PODs. Use kubectl scale command or edit the replicaset using kubectl edit replicaset.
+kubectl scale rs new-replica-set --replicas=5
+kubectl get pods
+
+solution 2: edit in this part
+kubectl edit replicaset new-replica-set
+spec:
+  replicas: 5
