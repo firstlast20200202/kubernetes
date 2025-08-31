@@ -36,3 +36,5 @@ kubectl describe <pod-name>
 
 when dont know the commands, can do it as below:
 kubectl create deployment --help
+then can get this eg.
+kubectl create deployment httd-frontend --image=httpd:2.4-alpine --replicas=3
