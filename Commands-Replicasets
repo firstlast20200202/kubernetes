@@ -3,3 +3,10 @@ output would be explaining each part in the yaml file, notice that the first par
 GROUP:      apps
 KIND:       ReplicaSet
 VERSION:    v1
+
+
+kubectl get crds  //custom recource definition (add-ons / extension of kubernetes)
+kubectl ap  //output is the selective commands which start with 'ap'
+kubectl api-resources  //output is all the objects defined in kubernetes (including 'kind' in the last column)
+kubectl api-resources | grep rs  //filter the output which include the word 'rs'
+
