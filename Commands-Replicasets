@@ -10,3 +10,7 @@ kubectl ap  //output is the selective commands which start with 'ap'
 kubectl api-resources  //output is all the objects defined in kubernetes (including 'kind' in the last column)
 kubectl api-resources | grep rs  //filter the output which include the word 'rs'
 
+
+question: Fix the original replica set new-replica-set to use the correct busybox image. Either delete and recreate the ReplicaSet or update the existing ReplicaSet and then delete all PODs, so new ones with the correct image will be created. If you opt to delete the ReplicaSet and recreate it, please refer to the file named new-replica-set.yaml, which is saved in the /root/ directory for your convenience and fix it.
+kubectl edit rs new-replica-set
+after updating the image, gotta manually delete all the pods and it will auto-creates new ones
