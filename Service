@@ -1,0 +1,50 @@
+3 types of services:
+NodePort
+Cluster IP
+Loadbalancer
+
+Yaml file of NodePort type:  
+apiVersion: v1
+kind: services
+metadata:
+  name: myapp-service
+
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80            //mandatory field
+      nodePort: 30008      //auto-distribute if not filled in
+  selector:                //links the service to the pod
+      app: myapp
+      type: front-end
+
+once done the yaml file, 
+create the service: kubectl create -f service-definition.yml
+kubectl get services
+
+use this pod to access to the web service:
+> curl http://192.168.1.2:30008
+
+
+The way to make service linking to multiple pods, is to make these two fields the same:
+selector:        //of service
+  app: myapp
+
+
+labels:        //of pods
+  app: myapp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
