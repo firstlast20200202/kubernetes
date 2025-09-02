@@ -1,3 +1,11 @@
 kubectl get pods     //get pods in the default namespace
 
 kubectl get pods --namespace=research    ////get pods in another namespace
+
+
+Question: Create a POD in the finance namespace. Use the spec given below.
+Name: redis
+Image name: redis
+
+kubectl run redis --image=redis -n=finance
+kubectl get pods -n=finance
