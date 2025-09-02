@@ -10,7 +10,7 @@ metadata:
   name: myapp-service
 
 spec:
-  type: NodePort
+  type: NodePort          //default value is cluster IP; Loadbalancer is only available for cloud support platforms
   ports:
     - targetPort: 80
       port: 80            //mandatory field
