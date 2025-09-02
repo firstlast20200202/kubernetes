@@ -14,3 +14,5 @@ kubectl get pods -n=finance
 Question: Which namespace has the blue pod in it?
 
 kubectl get pods --all-namespaces
+OR
+kubectl get pods -A
