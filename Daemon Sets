@@ -5,3 +5,7 @@ monitoring solution
 logs viewer
 kube-proxy
 weave-net
+
+
+daemon-set-definition.yaml file is similar to replicaset-definition.yaml
+it has 'selector' which links to pods as well as pods specification 'templates', make sure that the 'app' in these two fileds are the same.
