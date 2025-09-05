@@ -1,0 +1,1 @@
+Deamon sets are replica of pods, when a node is removed, daemon set in the node is auto-removed as well
