@@ -1,1 +1,7 @@
 Deamon sets are replica of pods, when a node is removed, daemon set in the node is auto-removed as well
+
+use cases of daemon sets:
+monitoring solution
+logs viewer
+kube-proxy
+weave-net
