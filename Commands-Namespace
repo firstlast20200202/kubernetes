@@ -5,12 +5,11 @@ reach other service in the another namespace:
 my.sql.connect("db-service.dev.svc.cluster.local")    //'cluster.local' is default domain name of kubernetes cluster, 'svc' is sub-domain for service
 
 
-
+kubectl create -f pod-definition.yml
+kubectl create -f pod-definition.yml --namespace=dev
 
 kubectl get pods     //get pods in the default namespace
-
 kubectl get pods --namespace=research    ////get pods in another namespace
-
 
 Question: Create a POD in the finance namespace. Use the spec given below.
 Name: redis
@@ -19,22 +18,16 @@ Image name: redis
 kubectl run redis --image=redis -n=finance
 kubectl get pods -n=finance
 
-
 Question: Which namespace has the blue pod in it?
-
 kubectl get pods --all-namespaces
 OR
 kubectl get pods -A
 
-
 Question: What DNS name should the Blue application use to access the database db-service in its own namespace - marketing? You can try it in the web application UI. Use port 6379.
-
 kubectl get pods -n=marketing
 kubectl get svc -n=marketing
 
-
 Question: What DNS name should the Blue application use to access the database db-service in the dev namespace? You can try it in the web application UI. Use port 6379.
-
 kubectl get svc -n=dev
 db-service.dev.svc.cluster.local
 
