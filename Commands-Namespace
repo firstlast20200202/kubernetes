@@ -22,6 +22,10 @@ OR
 >kubectl create namespace dev
 
 
+switch to another namespace perminantly:
+>kubectl config set-context $(kubectl config current-context) --namespace=dev
+
+
 kubectl get pods     //get pods in the default namespace
 kubectl get pods --namespace=research    ////get pods in another namespace
 
