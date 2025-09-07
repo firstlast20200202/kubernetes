@@ -1,3 +1,9 @@
+reach other objects in the same namespace:
+my.sql.connect("db-services")
+
+
+
+
 kubectl get pods     //get pods in the default namespace
 
 kubectl get pods --namespace=research    ////get pods in another namespace
