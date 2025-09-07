@@ -2,7 +2,7 @@ reach other service in the same namespace:
 my.sql.connect("db-service")
 
 reach other service in the another namespace:
-my.sql.connect("db-service.dev.svc.cluster.local")
+my.sql.connect("db-service.dev.svc.cluster.local")    //'cluster.local' is default domain name of kubernetes cluster, 'svc' is sub-domain for service
 
 
 
