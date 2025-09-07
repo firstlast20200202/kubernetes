@@ -9,6 +9,19 @@ kubectl create -f pod-definition.yml    //create a pod in default namespace
 kubectl create -f pod-definition.yml --namespace=dev    //create a pod in 'dev' namespace
 OR can add 'namespace: dev' under 'metadata' in pod-definition.yml instead 
 
+create namespace:
+in 'namespace-dev.yml' file:
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+
+> kubectl create -f namespace-dev.yml
+
+OR
+>kubectl create namespace dev
+
+
 kubectl get pods     //get pods in the default namespace
 kubectl get pods --namespace=research    ////get pods in another namespace
 
