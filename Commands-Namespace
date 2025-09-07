@@ -49,3 +49,7 @@ Question: What DNS name should the Blue application use to access the database d
 kubectl get svc -n=dev
 db-service.dev.svc.cluster.local
 
+
+Create quota of resources:
+add Compute-quota.yaml
+>kubectl create -f compute-quota.yaml
