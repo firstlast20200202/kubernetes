@@ -1,5 +1,8 @@
-reach other objects in the same namespace:
-my.sql.connect("db-services")
+reach other service in the same namespace:
+my.sql.connect("db-service")
+
+reach other service in the another namespace:
+my.sql.connect("db-service.dev.svc.cluster.local")
 
 
 
