@@ -37,7 +37,7 @@ kubectl run redis --image=redis -n=finance
 kubectl get pods -n=finance
 
 Question: Which namespace has the blue pod in it?
-kubectl get pods --all-namespaces
+kubectl get pods --all-namespaces    //view pods in all namespaces
 OR
 kubectl get pods -A
 
