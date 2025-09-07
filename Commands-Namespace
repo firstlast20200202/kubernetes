@@ -5,8 +5,9 @@ reach other service in the another namespace:
 my.sql.connect("db-service.dev.svc.cluster.local")    //'cluster.local' is default domain name of kubernetes cluster, 'svc' is sub-domain for service
 
 
-kubectl create -f pod-definition.yml
-kubectl create -f pod-definition.yml --namespace=dev
+kubectl create -f pod-definition.yml    //create a pod in default namespace
+kubectl create -f pod-definition.yml --namespace=dev    //create a pod in 'dev' namespace
+OR can add 'namespace: dev' under 'metadata' in pod-definition.yml instead 
 
 kubectl get pods     //get pods in the default namespace
 kubectl get pods --namespace=research    ////get pods in another namespace
