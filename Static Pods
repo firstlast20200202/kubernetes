@@ -1,0 +1,3 @@
+Static pods are stored here: /etc/kubernetes/manifests
+
+The path to find this file is: cat /var/lib/kubelet/config.yaml
