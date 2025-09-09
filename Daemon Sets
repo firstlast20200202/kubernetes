@@ -13,3 +13,12 @@ it has 'selector' which links to pods as well as pods specification 'templates',
 
 How does it work?
 Uses NodeAffinity and default sceduler to locate to different nodes
+
+
+To create a daemonset, since there's no 'kubectl create daemonset' command, we can create a deployment first, and get into the yaml file, then 
+delete 'replicas', 'strategy' and 'status' fields.
+>kubectl create deployment elasticsearch -n kube-system --image=registry.k8s.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml
+>kubectl create deployment elasticsearch -n kube-system --image=registry.k8s.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > fluentd.yaml
+>vi fluentd.yaml 
+>kubectl create -f fluentd.yaml 
+
