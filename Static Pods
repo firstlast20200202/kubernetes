@@ -10,5 +10,8 @@ kubelet.service
 kubeconfig.yaml
 StaticPodPath: /etc/kubernetes/manifests
 
+Once static pods are created, they can be viewed by:
+>docker ps
+
 
 The path to find this file is: cat /var/lib/kubelet/config.yaml
