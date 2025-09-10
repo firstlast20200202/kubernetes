@@ -1,3 +1,14 @@
-Static pods are stored here: /etc/kubernetes/manifests
+Static pods are configured in this folder here: /etc/kubernetes/manifests
+and the location of that directory is passed as an option while running the service:
+kubelet.service
+--pod-manifest-path=/etc/kubernetes/manifests  \\
+
+another way to configure this:
+kubelet.service
+--config=kubeconfig.yaml  \\
+
+kubeconfig.yaml
+StaticPodPath: /etc/kubernetes/manifests
+
 
 The path to find this file is: cat /var/lib/kubelet/config.yaml
