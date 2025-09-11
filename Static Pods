@@ -34,5 +34,10 @@ controlplane ~ ➜ ls /etc/kubernetes/manifests/    //there's no related yaml fi
 controlplane ~ ➜ kubectl get nodes -o wide      //the pod is in another node node01
 controlplane ~ ➜ ssh 192.168.219.134
 node01 ~ ➜ ls /etc/kubernetes/manifests/    //there's no yaml file in this folder
+node01 ~ ➜ ls /var/lib/kubelet/    
+node01 ~ ➜ cat config.yaml      //to find the static pod path in the yaml file
+
+
+
 
 
