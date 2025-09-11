@@ -40,7 +40,7 @@ node01 ~ ➜ ls /etc/just-to-mess-with-you    //it shows greenbox.yaml in the fo
 node01 ~ ➜ rm /etc/just-to-mess-with-you/greenbox.yaml    //remove the file
 node01 ~ ➜ ls /etc/just-to-mess-with-you    //verify there's no file in this folder
 node01 ~ ➜ exit    //exit this node
-controlplane ~ ➜ 
+controlplane ~ ➜ kubectl get pods --watch
 
 
 
