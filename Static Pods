@@ -30,9 +30,9 @@ Question: We just created a new static pod named static-greenbox. Find it and de
 >kubectl get pods -A    
 //by now findout that the pod is still existing because 'kubectl delete' doesnt work for statis pods, it will be re-created again
 The correct way is as below:
->ls /etc/kubernetes/manifests/    //there's no related yaml file in controlplane node
->kubectl get nodes -o wide      //the pod is in another node node01
->ssh 192.168.219.134
-
+controlplane ~ ➜ ls /etc/kubernetes/manifests/    //there's no related yaml file in controlplane node
+controlplane ~ ➜ kubectl get nodes -o wide      //the pod is in another node node01
+controlplane ~ ➜ ssh 192.168.219.134
+node01 ~ ➜ 
 
 
