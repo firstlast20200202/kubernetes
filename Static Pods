@@ -15,3 +15,8 @@ Once static pods are created, they can be viewed by:
 
 
 The path to find this file is: cat /var/lib/kubelet/config.yaml
+
+
+Question: Create a static pod named static-busybox that uses the busybox image , run in the default namespace and the command sleep 1000
+>kubectl run static-busybox --image=busybox --dry-run=client =o yaml --command -- sleep 1000
+>kubectl run static-busybox --image=busybox --dry-run=client =o yaml --command -- sleep 1000 > static-busybox.yaml
