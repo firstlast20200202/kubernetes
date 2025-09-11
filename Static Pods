@@ -34,10 +34,13 @@ controlplane ~ ➜ ls /etc/kubernetes/manifests/    //there's no related yaml fi
 controlplane ~ ➜ kubectl get nodes -o wide      //the pod is in another node node01
 controlplane ~ ➜ ssh 192.168.219.134
 node01 ~ ➜ ls /etc/kubernetes/manifests/    //there's no yaml file in this folder
-node01 ~ ➜ ls /var/lib/kubelet/    
-node01 ~ ➜ cat config.yaml      //to find the static pod path in the yaml file
-
-
+node01 ~ ➜ ls /var/lib/kubelet/    //to find the static pod path in the yaml file    
+node01 ~ ➜ cat config.yaml      //in the file it shows: staticPodPath: /etc/just-to-mess-with-you
+node01 ~ ➜ ls /etc/just-to-mess-with-you    //it shows greenbox.yaml in the folder
+node01 ~ ➜ rm /etc/just-to-mess-with-you/greenbox.yaml    //remove the file
+node01 ~ ➜ ls /etc/just-to-mess-with-you    //verify there's no file in this folder
+node01 ~ ➜ exit    //exit this node
+controlplane ~ ➜ 
 
 
 
