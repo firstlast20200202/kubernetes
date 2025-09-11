@@ -22,3 +22,17 @@ Question: Create a static pod named static-busybox that uses the busybox image ,
 >kubectl run static-busybox --image=busybox --dry-run=client -o yaml --command -- sleep 1000 > static-busybox.yaml
 >cp static-busybox.yaml /etc/kubernetes/manifests/    //move the file to this folder
 >kubectl get pods     //verify
+
+
+Question: We just created a new static pod named static-greenbox. Find it and delete it.
+>kubectl get pods -A
+>kubectl delete pod static-greenbox-node01
+>kubectl get pods -A    
+//by now findout that the pod is still existing because 'kubectl delete' doesnt work for statis pods, it will be re-created again
+The correct way is as below:
+>ls /etc/kubernetes/manifests/    //there's no related yaml file in controlplane node
+>kubectl get nodes -o wide      //the pod is in another node node01
+>ssh 192.168.219.134
+
+
+
