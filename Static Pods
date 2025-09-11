@@ -33,6 +33,6 @@ The correct way is as below:
 controlplane ~ ➜ ls /etc/kubernetes/manifests/    //there's no related yaml file in controlplane node
 controlplane ~ ➜ kubectl get nodes -o wide      //the pod is in another node node01
 controlplane ~ ➜ ssh 192.168.219.134
-node01 ~ ➜ 
+node01 ~ ➜ ls /etc/kubernetes/manifests/    //there's no yaml file in this folder
 
 
