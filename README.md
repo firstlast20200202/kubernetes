@@ -8,15 +8,15 @@ Udemy course link: https://www.udemy.com/course/certified-kubernetes-administrat
 Cluster architecture of Kubernetes:
 
 Master: 
-ETCD cluster
-kube-apiserver
-kube Controller Manager
-kube-scheduler
+ETCD cluster,
+kube-apiserver,
+kube Controller Manager,
+kube-scheduler.
 
 
 Worker Notes:
-kubelet
-Kube-proxy
+kubelet,
+Kube-proxy.
 
 
 Docker vs ContainerD:
