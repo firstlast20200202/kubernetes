@@ -3,3 +3,6 @@ download the kube sceduler binery and run it as a service with a set of options.
 
 Deploy an additional sceduler:
 you may use the same kube scheduler binary or use one that you have built yourself.
+
+
+
