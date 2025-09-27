@@ -9,4 +9,5 @@ in pod-definition.yaml:
 spec:
   priorityClassNAme: high-priority
 
-default value is 0 if not specified
+default value is 0 if not specified, if modify, nmust create a new priority class and assign the global default property to true. 
+note that in this case it can only be defined in a single priority class.
