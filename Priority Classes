@@ -1,0 +1,11 @@
+kubectl get priorityclass
+
+matching this field:
+in priority-class.yaml:
+metadata:
+  name: high-priority
+
+in pod-definition.yaml:
+spec:
+  priorityClassNAme: high-priority
+
