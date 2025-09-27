@@ -11,3 +11,6 @@ spec:
 
 default value is 0 if not specified, if modify, nmust create a new priority class and assign the global default property to true. 
 note that in this case it can only be defined in a single priority class.
+
+to assign higher priority workload to a full pod, the default value of 'preemptionPolicy: PreemptLowerPriority' means stopping the lower ones and put higher ones in;
+otherwise specify the value as preemptionPolicy: never
