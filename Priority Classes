@@ -9,3 +9,4 @@ in pod-definition.yaml:
 spec:
   priorityClassNAme: high-priority
 
+default value is 0 if not specified
