@@ -1,5 +1,5 @@
 to do: 
-23rd Aug: get familiar with linux commands
+13 Oct: get familiar with linux commands
 
 
 
