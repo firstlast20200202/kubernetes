@@ -1,4 +1,3 @@
-to do: 
 13 Oct: get familiar with linux commands
 
 
