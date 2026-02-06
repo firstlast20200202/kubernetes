@@ -3,3 +3,7 @@ kubectl get pods
 ls   //to get server folder name
 
 get into the server folder and kubectl create -f which deploy the server by creating all the components 
+
+kubectl top node
+
+kubectl top pod
