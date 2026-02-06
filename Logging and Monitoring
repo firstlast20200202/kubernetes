@@ -10,4 +10,4 @@ kubectl top pod
 
 
 
-kubectl logs webapp-1
+kubectl logs webapp-1    //debug
