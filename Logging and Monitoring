@@ -7,3 +7,7 @@ get into the server folder and kubectl create -f which deploy the server by crea
 kubectl top node
 
 kubectl top pod
+
+
+
+kubectl logs webapp-1
