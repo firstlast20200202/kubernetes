@@ -1,2 +1,11 @@
 k -n autoscale autoscale deployment apache-server --name=apache-server --cpu=50% --min=1 --max=4
 
+k -n autoscale edit hpa apache-server 
+
+//add under spec
+behavior:
+  scaleDown:
+    stabilizationWindowSeconds: 30
+
+//verify
+kubectl -n autoscale get hpa apache-server
