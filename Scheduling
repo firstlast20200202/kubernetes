@@ -1,0 +1,4 @@
+Scheduling is actually assigning a pod to a node
+two ways of scheduling:
+1. add a node name into pod definition file under spec.nodeName
+2. in Binding file add a node name under target.name
