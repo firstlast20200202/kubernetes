@@ -1,23 +1,3 @@
-13 Oct: get familiar with linux commands
-
-
-
-Udemy course link: https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14298418#lecture-article
-
-Cluster architecture of Kubernetes:
-
-Master: 
-ETCD cluster,
-kube-apiserver,
-kube Controller Manager,
-kube-scheduler.
-
-
-Worker Notes:
-kubelet,
-Kube-proxy.
-
-
 Docker vs ContainerD:
 we run containers using the run commands:
 commands of ContainerD: 
@@ -36,6 +16,10 @@ upgrade version by ETCDCTL_API=3 ./etcdctl version  then in API version 3 comman
 Kube-Scheduler decides which pod goes on which node, kubelet creates the pod and places the pod on the node
 
 Kubelet: register node, create pods, monitor node and pods
+
+
+21 Apr 2026: 
+ask: annotations in real question 2
 
 
 
