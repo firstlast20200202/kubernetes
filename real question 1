@@ -1,0 +1,2 @@
+k -n autoscale autoscale deployment apache-server --name=apache-server --cpu=50% --min=1 --max=4
+
