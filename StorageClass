@@ -28,8 +28,8 @@ PVC是用户申请存储的“请求单”
 StorageClass定义如何创建PV
 
 两种模式：
-静态绑定：admins create PV, users create PVC, system binds them               //甚至用外部存储时比如AWS EBS还要先claim space在上面
-动态绑定：users create PVC, StorageClass auto creates PV, PVC binds PV        //StorageClass决定PV如何创建
+静态绑定：admins create PV, users create PVC, system binds them               //甚至用外部存储时比如AWS EBS还要先provision storage在上面
+动态绑定：users create PVC, StorageClass auto creates PV (or auto-provision storage on AWS EBS), PVC binds PV        //StorageClass决定PV如何创建
 
 备考：
 Pod 用 Volume  
