@@ -18,7 +18,7 @@ Kube-Scheduler decides which pod goes on which node, kubelet creates the pod and
 Kubelet: register node, create pods, monitor node and pods
 
 
-21 Apr 2026: 
+22 Apr 2026: 
 ask: annotations in real question 2
 
 go through helm and ask
@@ -29,4 +29,4 @@ go through section 3
 
 real questions 1 and 2 and 3
 
-
+202 203 197 198
