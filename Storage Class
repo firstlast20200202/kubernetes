@@ -28,5 +28,11 @@ PVC是用户申请存储的“请求单”
 StorageClass定义如何创建PV
 
 两种模式：
-静态绑定：admins create PV, users create PVC, then bind
-动态绑定：PVC -> StorageClass -> auto create PV        //StorageClass决定PV如何创建
+静态绑定：admins create PV, users create PVC, system binds them
+动态绑定：users create PVC, StorageClass auto creates PV, PVC binds PV        //StorageClass决定PV如何创建
+
+备考：
+Pod 用 Volume  
+Volume 连 PVC  
+PVC 找 PV  
+PV 由 StorageClass 创建
