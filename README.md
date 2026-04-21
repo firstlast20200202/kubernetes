@@ -27,6 +27,5 @@ continue ingress
 
 go through section 3
 
-real questions 1 and 2 and 3
+real questions
 
-202 203 197 198
