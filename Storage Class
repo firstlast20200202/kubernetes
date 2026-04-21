@@ -20,3 +20,13 @@ spec:
       persistentVolumeClaim:
         claimName: local-pvc
 
+
+connections of storage, volume, persistent volume, persistent volume claim, storage class:
+volume是pod用的存储
+persistent volume是cluster中的真实存储资源
+PVC是用户申请存储的“请求单”
+StorageClass定义如何创建PV
+
+两种模式：
+静态绑定：admins create PV, users create PVC, then bind
+动态绑定：PVC -> StorageClass -> auto create PV        //StorageClass决定PV如何创建
