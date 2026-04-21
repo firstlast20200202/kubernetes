@@ -11,6 +11,6 @@ volumeBindingMode: WaitForFirstConsumer
 
 $ k apply -f sc.yaml
 
-//verify
+//verify whther it shows default for this sc
 $ k get sc
 ran-local-path (default)
