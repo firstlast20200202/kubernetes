@@ -26,7 +26,7 @@ go through helm and ask
 
 continue ingress
 
-go through section 3: from 77
+from 204 gateway
 
 real question 6
 
