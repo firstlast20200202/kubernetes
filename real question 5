@@ -20,3 +20,4 @@ kubectl -n spline-reticulator get all
 
 //get the ip addess 10.100.243.159 and add port number
 curl 10.100.243.159:80
+//output Hello World ^_^
