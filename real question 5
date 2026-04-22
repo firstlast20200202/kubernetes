@@ -1,0 +1,14 @@
+alias k=kubectl
+
+k -n spline-reticulator get all
+
+k -n spline-reticulator describe deployment front-end
+
+k -n spline-reticulator edit deployment front-end
+
+//add under containers:
+ports:                        //here is plural
+  - containerPort: 80
+    protocol: TCP
+
+k -n spline-reticulator expose deployment front-end --name=front-end-svc --port=80 --target-port=80 --protocol=TCP --type=NodePort     //TCP is in capital letters
