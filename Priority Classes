@@ -1,4 +1,11 @@
-non namespace
+priority class is non namespace
+
+the default priority class value of a pod is 0, if you want to change it, add this field globalDefault: true.
+
+in priority class definition file, preemptionPolicy is defining that when there's a higher priority job being scheduled, would it kill the lower priority running
+jobs first or being shceduled in higher priority then other jobs which are also being scheduled. the default value is PreemptlowerPriority, which would kill the 
+running lower priority jobs, if change to 'never', it wouldnt kill the existing running jobs, instead it would be scheduled ealier than other lower priority jobs
+which are being scheduled.
 
 kubectl get priorityclass
 
