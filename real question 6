@@ -1,0 +1,11 @@
+k -n priority get priorityclasses
+
+vi hp.yaml
+
+k -n priority apply -f hp.yaml
+
+k -n priority get all
+
+k -n priority edit deployment busybox-logger
+
+k -n priority get all
