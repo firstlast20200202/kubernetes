@@ -12,3 +12,11 @@ ports:                        //here is plural
     protocol: TCP
 
 k -n spline-reticulator expose deployment front-end --name=front-end-svc --port=80 --target-port=80 --protocol=TCP --type=NodePort     //TCP is in capital letters
+
+//verify
+kubectl -n spline-reticulator get svc front-end-svc -o wide
+OR
+kubectl -n spline-reticulator get all
+
+//get the ip addess 10.100.243.159 and add port number
+curl 10.100.243.159:80
