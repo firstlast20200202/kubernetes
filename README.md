@@ -20,8 +20,6 @@ Kubelet: register node, create pods, monitor node and pods
 
 23 Apr 2026: 
 
-ask: annotations in real question 2
-
 go through helm and ask
 
 continue ingress
@@ -29,6 +27,8 @@ continue ingress
 from 204 gateway
 
 real question 6
+
+real question 2 ask and repeat
 
 real questions
 
