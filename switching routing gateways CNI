@@ -28,9 +28,10 @@ eth0 = 第一个网卡
 eth1 = 第二个网卡
 if you run: 
 $ ip addr    //to see the ip addresses assigned to the interfaces
-eth0: inet 192.168.1.6/24    //一般wth0是主网络接口 eth1是额外网络接口
+eth0: inet 192.168.1.6/24    //一般eth0是主网络接口 eth1是额外网络接口
 eth1: inet 192.168.2.6/24
-
+一般eth0不能和eth1通信 所以192.168.1.0网络中的A不能和192.168.2.0网络中的C通信 
+要手动 $ ip route add 192.168.2.0/24 via 192.168.1.6 和 $ ip route add 192.168.1.0/24 via 192.168.2.6 才行 
 
 
 
