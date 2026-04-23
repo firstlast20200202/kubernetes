@@ -12,5 +12,5 @@ ip route     //to see routing table
 
 ip route add 192.168.1.0/24 via 192.168.2.1      //to add entries into the routing table
 
-cat /proc/sys/net/ipv4/ip_forward      //to check if ip forward is enabled on a host
+cat /proc/sys/net/ipv4/ip_forward      //to check if ip forward is enabled on a host if you are working on a host as a router
 
