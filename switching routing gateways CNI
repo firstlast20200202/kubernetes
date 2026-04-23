@@ -1,12 +1,18 @@
 switch is for hosts to communicate with each other within the same network
+$ ip link    //list or modify interfaces on the host
+if switch ip address is 192.168.1.0, we can assign the hosts within this network as below:
+$ ip addr add 192.168.1.10/24 dev eth0     //to set ip addresses on the interfaces
+$ ip addr add 192.168.1.11/24 dev eth0     //to set ip addresses on the interfaces
+so computers can now coomunciate with each other through the switch in this way:
+$ ping 192.168.1.11
 
 routing is for hosts communicate with each other between different networks
 
-ip link    //list or modify interfaces on the host
+
 
 ip addr    //to see the ip addresses assigned to the interfaces
 
-ip addr add 192.168.1.10/24 dev eth0     //to set ip addresses on the interfaces
+
 
 ip route     //to see routing table
 
