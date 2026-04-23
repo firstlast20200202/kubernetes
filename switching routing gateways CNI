@@ -1,4 +1,4 @@
-switch is for hosts to communicate with each other within the same network
+switch is for hosts to communicate with each other within the same network, one switch is one network
 $ ip link    //list or modify interfaces on the host
 if switch ip address is 192.168.1.0, we can assign the hosts within this network as below:
 $ ip addr add 192.168.1.10/24 dev eth0     //to set ip addresses on the interfaces
@@ -7,16 +7,18 @@ so computers can now coomunciate with each other through the switch in this way:
 $ ping 192.168.1.11
 
 routing is for hosts communicate with each other between different networks
-
-
+say there's another switch which ip address is 192.168.2.0, we use a router to connect these two networks, the router gets two ip assigned, one on each network
+192.168.1.1 and 192.168.2.1 
+if 192.168.1.11 wants to commnicate with 192.168.2.11, it needs to go through the route/gateway, the gateway is the door to other networks or to Internet 
+to see the system routing config, run:
+$ route    //nothing shows up for now
+to config the gateway on system B (192.168.1.11) to reach systems on network 2.0 (192.168.2.0), run:
+$ ip route add 192.168.2.0/24 via 192.168.1.1      //to add entries into the routing table, in this command front part is destination
+$ route    //run this command again it would show up the config now
 
 ip addr    //to see the ip addresses assigned to the interfaces
 
-
-
 ip route     //to see routing table
-
-ip route add 192.168.1.0/24 via 192.168.2.1      //to add entries into the routing table
 
 cat /proc/sys/net/ipv4/ip_forward      //to check if ip forward is enabled on a host if you are working on a host as a router
 
