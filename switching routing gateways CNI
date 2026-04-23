@@ -1,1 +1,3 @@
+switch is for hosts to communicate with each other within the same network
 
+routing is for hosts communicate with each other between different networks
