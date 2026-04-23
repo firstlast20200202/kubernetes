@@ -11,7 +11,7 @@ say there's another switch which ip address is 192.168.2.0, we use a router to c
 192.168.1.1 and 192.168.2.1 
 if 192.168.1.11 wants to commnicate with 192.168.2.11, it needs to go through the route/gateway, the gateway is the door to other networks or to Internet 
 to see the system routing config, run:
-$ route    //nothing shows up for now
+$ route    // (or $ ip route) nothing shows up for now
 to config the gateway on system B (192.168.1.11) to reach systems on network 2.0 (192.168.2.0), run:
 $ ip route add 192.168.2.0/24 via 192.168.1.1      //to add entries into the routing table, in this command front part is destination
 $ route    //run this command again it would show up the config now
@@ -20,9 +20,22 @@ $ ip route add 172.217.194.0 via 192.168.2.1
 to access to any other internet that you didnt config in your system:
 $ ip route add default via 192.168.2.1    //$ ip route add 0.0.0.0 via 192.168.2.1
 
-ip addr    //to see the ip addresses assigned to the interfaces
-
-ip route     //to see routing table
-
 cat /proc/sys/net/ipv4/ip_forward      //to check if ip forward is enabled on a host if you are working on a host as a router
+this command is for this scenario: system B is between two networks, so it's assigned to ip addesses, one for each network.
+B has two network interfaces: eth0 and eth1. 
+eth = Ethernet（以太网）
+eth0 = 第一个网卡
+eth1 = 第二个网卡
+if you run: 
+$ ip addr    //to see the ip addresses assigned to the interfaces
+eth0: inet 192.168.1.6/24    //一般wth0是主网络接口 eth1是额外网络接口
+eth1: inet 192.168.2.6/24
+
+
+
+
+
+
+
+
 
