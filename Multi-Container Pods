@@ -1,5 +1,8 @@
 route of logs:
 kubectl -n elastic-stack exec -it app -- cat /log/app.log
 
+difference of init container and sidecar container:
+init container executes before pod starts, sidecar container executes through the whole time that a pod is running.
+
 apps run on containers, containers run on pods, each container has it's own image; why creating a pod needs to define an image: because a pod needs to call this 
 image to genrerate containers, a pod doesnt have an image, a container does.
