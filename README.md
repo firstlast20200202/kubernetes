@@ -24,7 +24,7 @@ go through helm and ask
 
 continue ingress
 
-from 204 gateway 238 239 240
+
 
 real question 6
 
@@ -36,6 +36,8 @@ logging section 4
 
 
 
+*******************************************************************
+from 204 gateway 238 239 240
 
 gateway notes
 
