@@ -1,2 +1,5 @@
 route of logs:
 kubectl -n elastic-stack exec -it app -- cat /log/app.log
+
+apps run on containers, containers run on pods, each container has it's own image; why creating a pod needs to define an image: because a pod needs to call this 
+image to genrerate containers, a pod doesnt have an image, a container does.
