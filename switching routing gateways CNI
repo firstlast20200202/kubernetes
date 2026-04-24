@@ -35,7 +35,21 @@ eth1: inet 192.168.2.6/24
 $ ping 192.168.2.5     //verify on system A which ip address is 192.168.1.5 (192.168.2.5 is ip address of C)
 
 
+in HTTPRoute file, there's a part as below:
+spec:
+  parentRefs:
+    - name: nginx-gateway           # Name of the Gateway
+      namespace: nginx-gateway      # Namespace where the Gateway is deployed
+      sectionName: http 
+this namespace is getting from $ k get gateway -A
+this sectionName is used when there are multiple listeners in gateway file as below:
+listeners:
+  - name: http
+    port: 80
+  - name: https
+    port: 443
 
+this sctionName 用来指定Route 要绑定到 Gateway 的哪一个 listener.
 
 
 
