@@ -40,5 +40,5 @@ logging section 4
 
 gateway notes
 
-real 3 and 9
+real 3
 
