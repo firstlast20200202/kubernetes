@@ -1,1 +1,6 @@
-
+as there are different types of resources in kubernetes like pods, deployments, replicasets etc, we actually can define any type of resource by
+step 1: configuring the resource in the kubernetes API
+creating a CRD (Custom Resource Definition) file for that type eg. flightticket-custom-definition.yaml  
+step 2:
+creating a resource using that CRD
+but for now the resource only sit there and doesnt do anything, then we need a controller to perform it.
