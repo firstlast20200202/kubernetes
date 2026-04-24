@@ -1,1 +1,48 @@
+k get all
 
+k edit deployment synergy-leverager
+//
+containers:
+      - args:
+        - /bin/sh
+        - -c
+        - |
+          i=0; while true; do
+            echo "$(date) INFO $i" >> /var/log/synergy-leverager.log;
+            i=$((i+1));
+            sleep 5;
+          done
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        name: synergy-leverager
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/log
+          name: test
+      - args:                                                        //ADD                                 
+        - /bin/sh                                           //ADD
+        - -c                                           //ADD
+        - tail -n+1 -f /var/log/synergy-leverager.log                                           //ADD
+        image: busybox:stable                                           //ADD
+        imagePullPolicy: IfNotPresent                                           //ADD
+        name: sidecar                                           //ADD
+        resources: {}                                           //ADD
+        terminationMessagePath: /dev/termination-log                                           //ADD
+        terminationMessagePolicy: File                                           //ADD
+        volumeMounts:                                           //ADD
+        - mountPath: /var/log                                           //ADD
+          name: test                                           //ADD
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:                                                  //ADD
+      - emptyDir: {}                                            //ADD
+        name: test                                              //ADD
+status:
+
+//verify
+k logs synergy-leverager-6b7c66bb6b-l4phx -c sidecar
