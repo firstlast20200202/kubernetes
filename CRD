@@ -4,3 +4,6 @@ creating a CRD (Custom Resource Definition) file for that type eg. flightticket-
 step 2:
 creating a resource using that CRD
 for now the resource is stored in etcd but doesnt do anything, then we need a controller to perform it.
+
+operator = CRD + controller
+operator eg. ArgoCD
