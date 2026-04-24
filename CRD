@@ -4,6 +4,13 @@ creating a CRD (Custom Resource Definition) file for that type eg. flightticket-
 step 2:
 creating a resource using that CRD
 for now the resource is stored in etcd but doesnt do anything, then we need a controller to perform it.
+controller的作用：
+发现 MyDatabase
+        ↓
+自动创建 Pod / Service / PVC
+        ↓
+保证状态正确
 
 operator = CRD + controller
 operator eg. ArgoCD
+operator = 用代码实现自动运维，让 Kubernetes 能管理复杂应用
