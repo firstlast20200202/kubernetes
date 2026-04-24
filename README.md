@@ -44,3 +44,4 @@ gateway notes
 
 question 11: episode 184
 
+tomorrow repeat crd section
