@@ -21,19 +21,12 @@ containers:
         volumeMounts:
         - mountPath: /var/log
           name: test
-      - args:                                                        //ADD                                 
-        - /bin/sh                                           //ADD
-        - -c                                           //ADD
-        - tail -n+1 -f /var/log/synergy-leverager.log                                           //ADD
-        image: busybox:stable                                           //ADD
-        imagePullPolicy: IfNotPresent                                           //ADD
-        name: sidecar                                           //ADD
-        resources: {}                                           //ADD
-        terminationMessagePath: /dev/termination-log                                           //ADD
-        terminationMessagePolicy: File                                           //ADD
-        volumeMounts:                                           //ADD
-        - mountPath: /var/log                                           //ADD
-          name: test                                           //ADD
+      - name: sidecar                                                                               //ADD
+        image: busybox:1.28                                                                         //ADD
+        command: ['/bin/sh', '-c', "tail -n+1 -f /var/log/synergy-leverager.log"]                   //ADD                                                                                                                     
+        volumeMounts:                                                                               //ADD
+        - mountPath: /var/log                                                                       //ADD
+          name: test                                                                                //ADD
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
