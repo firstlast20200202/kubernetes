@@ -1,0 +1,9 @@
+kubectl get crd | grep cert-manager > ~/resources.yaml
+
+//verify
+cat ~/resources.yaml
+
+kubectl explain certificate.spec.subject > ~/subject.yaml
+
+//verify
+cat ~/subject.yaml
