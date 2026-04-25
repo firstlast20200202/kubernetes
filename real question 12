@@ -9,3 +9,5 @@ k -n nginx-static rollout restart deployment nginx-static        //in this confi
 //verify
 curl -k --tls-max 1.2 https://web.k8snginx.local
 
+k -n nginx-static edit configmap nginx-config
+//under section data, above kind section, add immutable: true
