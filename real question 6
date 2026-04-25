@@ -3,6 +3,8 @@ k -n priority get priorityclasses
 vi hp.yaml
 
 k -n priority apply -f hp.yaml
+//OR
+k -n priority create priorityclass high-priority --value=999999999             
 
 k -n priority get all
 
@@ -10,12 +12,3 @@ k -n priority edit deployment busybox-logger
 
 k -n priority get all
 
-
-//method 2
-k -n priority get all
-k -n priority get priorityclass
-k -n priority create priorityclass high-priority --value=999999999              //here is different
-k -n priority edit deployment busybox-logger
-k -n priority get priorityclass
-k -n priority rollout restart deployment busybox-logger
-k -n priority get all
