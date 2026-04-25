@@ -21,7 +21,7 @@ to access to any other internet that you didnt config in your system:
 $ ip route add default via 192.168.2.1    //$ ip route add 0.0.0.0 via 192.168.2.1
 
 cat /proc/sys/net/ipv4/ip_forward      //to check if ip forward is enabled on a host if you are working on a host as a router
-this command is for this scenario: system B is between two networks, so it's assigned to ip addesses, one for each network.
+this command is for this scenario: system B is between two networks, so it's assigned two ip addesses, one for each network.
 B has two network interfaces: eth0 and eth1. 
 eth = Ethernet（以太网）
 eth0 = 第一个网卡
