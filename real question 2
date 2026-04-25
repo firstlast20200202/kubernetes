@@ -26,7 +26,7 @@ spec:
 $ k -n sound-repeater apply -f ingress.yaml
 
 //verify
-$ curl http://example.org/echo
+$ curl http://example.org/echo      //就是curl命令加上题目给的url测试
 
 
 annotation 是由控制器实现的，比如：
