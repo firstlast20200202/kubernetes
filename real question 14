@@ -1,1 +1,9 @@
+k -n relative-fawn get all
+
+k -n relative-fawn scale deployment wordpress --replicas=0
+
+k -n relative-fawn get nodes                                              //important to remember
+
+k -n relative-fawn describe node base
+
 
