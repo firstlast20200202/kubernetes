@@ -1,0 +1,11 @@
+k -n nginx-static get all
+
+k -n nginx-static get configmap
+
+k -n nginx-static edit configmap nginx-config
+
+k -n nginx-static rollout restart deployment nginx-static        //in this configmap question is the only time you need to do rollout restart deployment 
+
+//verify
+curl -k --tls-max 1.2 https://web.k8snginx.local
+
