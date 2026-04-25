@@ -14,6 +14,8 @@ real question 13: episode 211
 
 real question 2 3 4 5 6 再做一遍
 
+question 13: gotta learn theory
+
 
 
 
