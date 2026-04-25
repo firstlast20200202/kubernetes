@@ -18,9 +18,6 @@ logging section 4
 real question 13: episode 211
 
 
-*******************************************************************
-
-gateway notes
 
 
 
