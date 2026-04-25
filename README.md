@@ -8,9 +8,6 @@ continue ingress
 
 real question 6
 
-real question 2 ask how to search annotation in docs
-
-real questions
 
 logging section 4 
 
