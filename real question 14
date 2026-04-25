@@ -4,10 +4,15 @@ k -n relative-fawn scale deployment wordpress --replicas=0
 
 //k -n relative-fawn describe deployment wordpress                          //不要用describe查how many containers，initContainer显示在pod template下Containers上，不好找
 
-k -n relative-fawn edit deployment wordpress                              //用edit查how many containers
+k -n relative-fawn edit deployment wordpress                                //用edit查how many containers
 
-k -n relative-fawn get nodes                                              //important to remember
+k -n relative-fawn get nodes                                                //important to remember
 
 k -n relative-fawn describe node base
 
+k -n relative-fawn edit deployment wordpress                                //在两个container里改resource.requests
 
+k -n relative-fawn scale deployment wordpress --replicas=0
+
+//verify
+k -n relative-fawn get all
