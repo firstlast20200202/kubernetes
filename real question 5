@@ -12,6 +12,7 @@ ports:                        //here is plural
     protocol: TCP
 
 k -n spline-reticulator expose deployment front-end --name=front-end-svc --port=80 --target-port=80 --protocol=TCP --type=NodePort     //TCP is in capital letters
+note: port in service is a mandatory field
 
 //verify
 kubectl -n spline-reticulator get svc front-end-svc -o wide
