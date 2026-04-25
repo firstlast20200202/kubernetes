@@ -22,6 +22,6 @@ real question 13: episode 211
 
 gateway notes
 
-question 11: episode 184
 
-tomorrow repeat 184
+
+
