@@ -27,3 +27,15 @@ $ k -n sound-repeater apply -f ingress.yaml
 
 //verify
 $ curl http://example.org/echo
+
+
+annotation 是由控制器实现的，比如：
+NGINX Ingress Controller
+Traefik
+HAProxy
+
+考试时如何搜annotation：
+Ingress 的 annotation 不在 Kubernetes 官方 API 文档里，而在具体 Ingress Controller 的文档中
+搜nginx ingress 
+点Before you migrate
+搜rewrite
