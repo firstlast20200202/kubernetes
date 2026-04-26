@@ -1,0 +1,10 @@
+for each application, there are tones of files like pod definition file, deployment definition file, service file, etc. when we need to update them, it's gonna be done one by one. 
+helm is tool that helps us to do it easily. helm perform the application as a whole, helm knows which file to update, etc.
+
+helm install <app-name>
+
+helm upgrade <app-name>
+
+helm rollback <app-name>
+
+helm uninstall <app-name>
