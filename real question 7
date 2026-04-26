@@ -2,6 +2,11 @@ helm repo add argo https://argoproj.github.io/argo-helm/
 
 helm repo update
 
-helm search repo argo | grep argo-cd
+helm search repo argo | grep argo-cd                        //get version number
 
-//not finished yet
+helm template argocd argo/argo-cd --version 5.5.22 --namespace argocd --set crds.install=false > ~/argo-helm.yaml
+
+helm install argocd argo/argo-cd --version 5.5.22 --namespace argocd --set crds.install=false
+
+//verify
+kubectl -n argocd get pods
