@@ -23,3 +23,5 @@ Argo CD 自动检测变化
 
 你只需要：
 修改 Git 和 push，Argo CD 自动帮你部署
+
+Argo CD 的 Helm Chart 就是用 Helm 打包好的 Argo CD 安装包
