@@ -8,3 +8,11 @@ helm upgrade <app-name>
 helm rollback <app-name>
 
 helm uninstall <app-name>
+
+
+Helm 是工具，Chart 是被 Helm 安装的“应用包”
+Chart 是“应用安装包”，Bitnami 是“提供这些安装包的仓库/厂商”
+Bitnami: 一个专门提供高质量 Chart 和镜像的厂商/仓库，它提供很多现成 Chart，例如：
+nginx
+mysql
+redis
