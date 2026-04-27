@@ -7,11 +7,14 @@ sh etcd-set.sh
 
 kubectl get pods -A                        //结果显示kube-system namespace的kube-scheduler-master01的status异常
 
-k -n kube-system get pods                  
+k -n kube-system get pods    
+
+kubectl describe pod -n kube-system kube-scheduler-master01          //检查message
 
 vi /etc/kubernetes/manifests/kube-apiserver.yaml
 //edit this field to:
-//--etcd-servers=https://127.0.0.1:2379
+//--etcd-servers=https://127.0.0.1:2379                //取下面两个url的任何一个放到这里
 
 //where to get ths value:
-//vi /etc/kubernetes/manifests/kube-scheduler.yaml
+//vi /etc/kubernetes/manifests/etcd.yaml
+//--listen-client-urls=https://127.0.0.1:2379,https://172.30.30.11:2379
