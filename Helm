@@ -28,7 +28,8 @@ Hub（平台）= 聚合和分发多个仓库/内容的平台
 two steps to deploy the application on a kubernetes cluster:
 helm repo add bitnami https://charts.bitnami.com.bitnami
 helm install my-release bitnami/wordpress
-helm list      //verify
+//verify
+helm list      
 helm uninstall my-release
 
 helm repo update              //更新本地缓存的 Helm 仓库索引（index），获取最新的 Chart 列表和版本信息
