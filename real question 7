@@ -12,6 +12,14 @@ helm install argocd argo/argo-cd --version 5.5.22 --namespace argocd --set crds.
 kubectl -n argocd get pods
 
 
+
+
+
+拆解：
+helm template argocd argo/argo-cd             //把argocd helm chart渲染成kubernetes yaml，但不安装在集群中
+helm template          //helm的纯渲染模式，输出的是kubernetes yaml，不会：创建资源、改变集群状态、记录release；这个命令相当于“预览安装结果”
+
+
 argocd的作用：
 以前kubectl apply -f app.yaml 
 现在用argocd的作用：
