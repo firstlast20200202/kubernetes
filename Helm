@@ -58,3 +58,5 @@ helm history nginx-release
 helm rollback nginx-release 1    //it creates release 3 which config is the same as release 1, it's a simple example that's why there's no errors displaying when running this script, if:
 helm upgrade wordpress-release bitnami/wordpress    //it shows error of password empty which would be cased by the user doesnt have admin permission
 
+other commands:
+helm repo rm hashicorp      /remove the Hashicorp helm repository from the cluster
