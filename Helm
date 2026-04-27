@@ -16,3 +16,8 @@ Bitnami: 一个专门提供高质量 Chart 和镜像的厂商/仓库，它提供
 nginx
 mysql
 redis
+
+$ helm install <release-name> <chart-name>        say
+helm install my-site-1 bitnami/wordpress  
+helm install my-site-2 bitnami/wordpress
+each of them can be released in different enviornments like DEV or PROD with the same chart name
