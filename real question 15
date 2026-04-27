@@ -24,3 +24,24 @@ vi /etc/kubernetes/manifests/kube-apiserver.yaml                                
 //重启kubelet
 systemctl daemon-reload
 systemctl restart kubelet
+
+
+//第二部分
+kubectl get nodes
+kubectl -n kube-system get pod
+
+lscpu | grep CPU
+vim /etc/kubernetes/manifests/kube-scheduler.yaml
+//update requests.cpu: 200m
+
+systemctl daemon-reload
+systemctl restart kubelet
+
+//verify
+kubectl get nodes
+kubectl -n kube-system get pod
+
+//remember:             
+root@master01:~# exit          //quit to base node
+candidate@master01:~$ exit     //quit cka000059
+
