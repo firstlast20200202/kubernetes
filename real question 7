@@ -10,3 +10,16 @@ helm install argocd argo/argo-cd --version 5.5.22 --namespace argocd --set crds.
 
 //verify
 kubectl -n argocd get pods
+
+
+argocd的作用：
+以前kubectl apply -f app.yaml 
+现在用argocd的作用：
+Git 仓库（YAML）
+        ↓
+Argo CD 自动检测变化
+        ↓
+自动部署到 Kubernetes
+
+你只需要：
+修改 Git 和 push，Argo CD 自动帮你部署
