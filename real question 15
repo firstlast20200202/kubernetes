@@ -18,3 +18,7 @@ vi /etc/kubernetes/manifests/kube-apiserver.yaml                                
 //where to get ths value:
 //vi /etc/kubernetes/manifests/etcd.yaml
 //--listen-client-urls=https://127.0.0.1:2379,https://172.30.30.11:2379
+
+//重启kubelet
+systemctl daemon-reload
+systemctl restart kubelet
