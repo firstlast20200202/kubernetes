@@ -46,4 +46,15 @@ $ ls wordpress
 $ helm install my-release ./wordpress
 
 
+Lifecycle management with Helm:
+helm install nginx-release bignami/nginx       //you can specify a version by adding: --version 7.1.0
+k get pods
+k describe pod <pod-name>    //get version in the image
+helm upgrade nginx-release bignami/nginx
+k get pods
+k describe pod <pod-name>    
+helm list       //get rivision 2
+helm history nginx-release
+helm rollback nginx-release 1    //it creates release 3 which config is the same as release 1, it's a simple example that's why there's no errors displaying when running this script, if:
+helm upgrade wordpress-release bitnami/wordpress    //it shows error of password empty which would be cased by the user doesnt have admin permission
 
