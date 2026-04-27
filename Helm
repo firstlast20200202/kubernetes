@@ -33,3 +33,4 @@ helm list
 helm uninstall my-release
 
 helm repo update              //更新本地缓存的 Helm 仓库索引（index），获取最新的 Chart 列表和版本信息
+因为 helm repo add bitnami https://charts.bitnami.com/bitnami 本地只是记录了仓库地址，并没有最新内容，所以要 helm repo update
