@@ -60,3 +60,7 @@ helm upgrade wordpress-release bitnami/wordpress    //it shows error of password
 
 other commands:
 helm repo rm hashicorp      /remove the Hashicorp helm repository from the cluster
+
+
+helm list 是列的release
+helm history <release-name> 是列的某个release的revisions
