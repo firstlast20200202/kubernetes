@@ -11,7 +11,7 @@ k -n kube-system get pods
 
 kubectl describe pod -n kube-system kube-scheduler-master01          //检查message
 
-vi /etc/kubernetes/manifests/kube-apiserver.yaml
+vi /etc/kubernetes/manifests/kube-apiserver.yaml                                                    //为什么scheduler异常要改api-server？？？？？？？？？？？？？？？？？？？？？？？？
 //edit this field to:
 //--etcd-servers=https://127.0.0.1:2379                //取下面两个url的任何一个放到这里
 
