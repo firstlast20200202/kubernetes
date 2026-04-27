@@ -7,7 +7,7 @@ sh etcd-set.sh
 
 kubectl get nodes
 
-kubectl get pods -A                        //结果显示kube-system namespace的kube-scheduler-master01的status异常
+kubectl get pods -A                        //结果显示kube-system namespace的kube-scheduler-master01的status异常：这个在第二部分修复
 
 k -n kube-system get pods    
 
