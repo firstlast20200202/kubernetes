@@ -1,1 +1,17 @@
+candidate@master01:~$ ssh cka000059
 
+candidate@master01:~$ sudo -i                //change user from candidate to root
+root@master01:~# 
+
+sh etcd-set.sh
+
+kubectl get pods -A                        //结果显示kube-system namespace的kube-scheduler-master01的status异常
+
+k -n kube-system get pods                  
+
+vi /etc/kubernetes/manifests/kube-apiserver.yaml
+//edit this field to:
+//--etcd-servers=https://127.0.0.1:2379
+
+//where to get ths value:
+//vi /etc/kubernetes/manifests/kube-scheduler.yaml
