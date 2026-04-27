@@ -47,7 +47,7 @@ $ helm install my-release ./wordpress
 
 
 Lifecycle management with Helm:
-helm install nginx-release bignami/nginx       //you can specify a version by adding: --version 7.1.0
+helm install nginx-release bitnami/nginx       //you can specify a version by adding: --version 7.1.0
 k get pods
 k describe pod <pod-name>    //get version in the image
 helm upgrade nginx-release bignami/nginx
