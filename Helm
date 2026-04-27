@@ -17,7 +17,16 @@ nginx
 mysql
 redis
 
-$ helm install <release-name> <chart-name>        say
+$ helm install <release-name> <chart-name>        say,
 helm install my-site-1 bitnami/wordpress  
 helm install my-site-2 bitnami/wordpress
 each of them can be released in different enviornments like DEV or PROD with the same chart name
+
+Repo（仓库）= 存放内容的地方
+Hub（平台）= 聚合和分发多个仓库/内容的平台
+
+two steps to deploy the application on a kubernetes cluster:
+helm repo add bitnami https://charts.bitnami.com.bitnami
+helm install my-release bitnami/wordpress
+
+
