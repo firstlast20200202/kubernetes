@@ -23,7 +23,7 @@ containers:
           name: test
       - name: sidecar                                                                               //ADD
         image: busybox:1.28                                                                         //ADD
-        command: ['/bin/sh', '-c', "tail -n+1 -f /var/log/synergy-leverager.log"]                   //ADD                                                                                                                     
+        args: ['/bin/sh', '-c', "tail -n+1 -f /var/log/synergy-leverager.log"]                      //ADD  这里别用command用args比较好 和上面那个container统一 还有方括号里要加逗号 要不就写成和上面那个container一样的格式吧                                                                                                                   
         volumeMounts:                                                                               //ADD
         - mountPath: /var/log                                                                       //ADD
           name: test                                                                                //ADD
