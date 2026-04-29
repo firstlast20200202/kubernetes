@@ -1,1 +1,13 @@
+Gateway + HTTPRoute is replacing Ingress
 
+Ingress 有很多 annotation
+
+Gateway + HTTPRoute 把入口和路由规则拆开了
+
+Gateway（入口）
+   ↓
+HTTPRoute（路由规则）
+   ↓
+Service
+   ↓
+Pod
