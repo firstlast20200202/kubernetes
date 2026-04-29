@@ -39,6 +39,9 @@ Volume 连 PVC
 PVC 找 PV  
 PV 由 StorageClass 创建
 
+其实就是：
+先创建一个storageClass，然后把storageClass的name写进PVC里，这时触发创建PV，最后在deployment文件的pod里添加PVC的name
+
 关于provisioner:
 StorageClass + provisioner = 自动创建 PV（动态存储）
 provisioner 是“创建存储”的程序/插件
