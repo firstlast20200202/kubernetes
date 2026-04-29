@@ -49,7 +49,7 @@ listeners:
   - name: https
     port: 443
 
-this sctionName 用来指定Route 要绑定到 Gateway 的哪一个 listener.
+this sctionName 用来指定 Route 要绑定到 Gateway 的哪一个 listener.
 
 
 
