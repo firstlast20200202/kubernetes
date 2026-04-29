@@ -1,1 +1,22 @@
+k get namespace frontend --show-labels
 
+k get namespace backend --show-labels
+
+k -n frontend get pods --show-labels
+
+k -n backend get pods --show-labels
+
+k -n frontend get networkpolicies
+
+k -n backend get networkpolicies
+
+ls ~/netpol 
+
+cat ~/netpol/netpol1.yaml
+cat ~/netpol/netpol2.yaml                //podSelector.matchLabels:.app: backend  podSelector.matchLabels.app: frontend
+cat ~/netpol/netpol23yaml
+
+k -n backend apply -f ~/netpol/netpol2.yaml 
+
+//verify
+k -n backend get networkpolicies
