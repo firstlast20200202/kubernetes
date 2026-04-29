@@ -34,8 +34,8 @@ lscpu | grep CPU
 vim /etc/kubernetes/manifests/kube-scheduler.yaml
 //update requests.cpu: 200m
 
-systemctl daemon-reload
-systemctl restart kubelet
+systemctl daemon-reload                                    //加载所有配置文件
+systemctl restart kubelet                                  //重启服务使加载生效
 
 //verify
 kubectl get nodes
