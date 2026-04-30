@@ -8,7 +8,7 @@ sudo systemctl start cri-docker
 sudo systemctl status cri-docker
 
 
-sudo vi /etc/sysctl.conf
+sudo vi /etc/sysctl.conf                                              //一定要加sudo
 
 //add these at the end of the file
 net.bridge.bridge-nf-call-iptables = 1
