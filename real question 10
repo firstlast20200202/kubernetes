@@ -20,3 +20,5 @@ k -n backend apply -f ~/netpol/netpol2.yaml
 
 //verify
 k -n backend get networkpolicies
+
+这道题就是选出适当的policy然后apply，真正有用的只有apply这一步
