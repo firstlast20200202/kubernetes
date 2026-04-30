@@ -1,4 +1,4 @@
-sudo dpkg -i ~/cri-dockerd_0.3.21.3-0.ubuntu-jammy_64.deb
+sudo dpkg -i ~/cri-dockerd_0.3.21.3-0.ubuntu-jammy_64.deb              //dpkg: Debian的底层包管理工具；-i：install
 
 sudo systemctl enable cri-docker
 
