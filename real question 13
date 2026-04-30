@@ -20,3 +20,6 @@ CNI是让pod拥有IP并能互相通信的一套规则+插件机制
 常见CNI插件：
 Calico（支持 NetworkPolicy）
 Flannel（简单，但不支持 NetworkPolicy）
+
+
+cluster-cidr是整个cluster中所有pod的IP地址范围
