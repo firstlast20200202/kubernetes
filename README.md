@@ -7,4 +7,5 @@ real question 7: 周四反复看
 
 5. create a new service front-end-svc
 
+mariadb
 
