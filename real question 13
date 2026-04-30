@@ -13,3 +13,10 @@ kubectl create -f custom-resources.yaml
 
 //verify
 kubectl -n calico-system get pod
+
+
+CNI是让pod拥有IP并能互相通信的一套规则+插件机制
+当一个pod创建时，CNI分配一个IP地址，连接到网络，和其它pod通信
+常见CNI插件：
+Calico（支持 NetworkPolicy）
+Flannel（简单，但不支持 NetworkPolicy）
