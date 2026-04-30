@@ -1,6 +1,6 @@
-k get namespace frontend --show-labels
+k get namespace frontend --show-labels            //k describe ns frontend
 
-k get namespace backend --show-labels
+k get namespace backend --show-labels              //k describe ns backend
 
 k -n frontend get pods --show-labels
 
