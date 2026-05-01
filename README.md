@@ -14,3 +14,5 @@ cri-dockerd是sudo systemctl enable
 13 calico
 
 12 也没写对
+
+7 把题读完
