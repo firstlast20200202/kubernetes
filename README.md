@@ -16,3 +16,5 @@ cri-dockerd是sudo systemctl enable
 12 也没写对
 
 7 把题读完
+
+5 deployment 里边ports 写containerPort和protocol： TCP
