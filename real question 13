@@ -23,3 +23,8 @@ Flannel（简单，但不支持 NetworkPolicy）
 
 
 cluster-cidr是整个cluster中所有pod的IP地址范围
+
+
+万一不小心用了k apply -f而忘了用k create -f，这么补救：
+kubectl delete -f xxx.yaml
+kubectl create -f xxx.yaml
