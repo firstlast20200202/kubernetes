@@ -3,7 +3,7 @@
 
 5. create a new service front-end-svc
 
-周五 背串了
+周五 背串了 15 16
 ETCD迁移那道题是root systemctl daemon-reload
 
 
