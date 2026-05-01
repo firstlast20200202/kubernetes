@@ -5,3 +5,7 @@
 
 mariadb
 
+
+周五反复看：
+cer-manager
+
