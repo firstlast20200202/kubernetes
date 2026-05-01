@@ -3,11 +3,10 @@
 
 5. create a new service front-end-svc
 
-mariadb
+周五 背串了
+ETCD迁移那道题是root systemctl daemon-reload
 
 
-周五反复看：
-cert-manager
-gateway
-mariadb重做 没做出来
 
+
+cri-dockerd是sudo systemctl enable
