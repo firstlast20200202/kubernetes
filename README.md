@@ -11,4 +11,6 @@ ETCD迁移那道题是root systemctl daemon-reload
 
 cri-dockerd是sudo systemctl enable
 
-calico
+13 calico
+
+12 也没写对
